@@ -39,6 +39,9 @@ class OkashiData: ObservableObject {
         }
     }
     // 非同期でお菓子データを取得
+    // @Publishedの変数を更新するときはメインスレッドで更新する必要がある
+    // @MainActorを使いメインスレッドで更新する
+    @MainActor
     private func search(keyword: String) async {
         // お菓子の検索キーワードをURLエンコードする
         guard let keyword_encode = keyword.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
@@ -61,7 +64,24 @@ class OkashiData: ObservableObject {
             // 受け取ったJSONデータをパース（解析）して格納
             let json = try decoder.decode(ResultJson.self, from: data)
             
-            print(json)
+//            print(json)
+            // お菓子の情報が取得できているか確認
+            guard let items = json.item else { return}
+            // お菓子のリストを初期化
+            self.okashiList.removeAll()
+            
+            // 取得しているお菓子の数だけ処理
+            for item in items {
+                if let name = item.name,
+                   let link = item.url,
+                   let image = item.image {
+                    // 1つのお菓子を構造体でまとめて管理
+                    let okashi = OkashiItem(name: name, link: link, image: image)
+                    // お菓子の配列へ追加
+                    self.okashiList.append(okashi)
+                }
+            }
+            print(self.okashiList)
         } catch {
             print("エラーが出た！")
         }
