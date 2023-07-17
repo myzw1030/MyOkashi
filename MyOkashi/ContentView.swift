@@ -3,6 +3,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     // OkashiDataを参照する状態変数
     @StateObject var okashiDataList = OkashiData()
     // 入力された文字列を保持する状態変数
