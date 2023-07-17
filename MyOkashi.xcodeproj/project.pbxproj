@@ -12,6 +12,7 @@
 		DA7F657F2A5A8F8800CBD45D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7F657E2A5A8F8800CBD45D /* Assets.xcassets */; };
 		DA7F65822A5A8F8800CBD45D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7F65812A5A8F8800CBD45D /* Preview Assets.xcassets */; };
 		DA7F658B2A5A914000CBD45D /* OkashiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F658A2A5A914000CBD45D /* OkashiData.swift */; };
+		DA7F658D2A65364400CBD45D /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F658C2A65364400CBD45D /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		DA7F657E2A5A8F8800CBD45D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA7F65812A5A8F8800CBD45D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA7F658A2A5A914000CBD45D /* OkashiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkashiData.swift; sourceTree = "<group>"; };
+		DA7F658C2A65364400CBD45D /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				DA7F657A2A5A8F8400CBD45D /* MyOkashiApp.swift */,
 				DA7F657C2A5A8F8400CBD45D /* ContentView.swift */,
+				DA7F658C2A65364400CBD45D /* SafariView.swift */,
 				DA7F658A2A5A914000CBD45D /* OkashiData.swift */,
 				DA7F657E2A5A8F8800CBD45D /* Assets.xcassets */,
 				DA7F65802A5A8F8800CBD45D /* Preview Content */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7F658D2A65364400CBD45D /* SafariView.swift in Sources */,
 				DA7F657D2A5A8F8400CBD45D /* ContentView.swift in Sources */,
 				DA7F658B2A5A914000CBD45D /* OkashiData.swift in Sources */,
 				DA7F657B2A5A8F8400CBD45D /* MyOkashiApp.swift in Sources */,

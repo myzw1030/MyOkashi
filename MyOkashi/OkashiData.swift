@@ -28,6 +28,8 @@ class OkashiData: ObservableObject {
     
     // お菓子のリスト（Identifibleプロトコル）
     @Published var okashiList: [OkashiItem] = []
+    // クリックされたWebページのURL情報
+    var okashiLink: URL?
     
     // web API検索用メソッド　第一引数:keyword 検索したいワード
     func searchOkashi(keyword: String) {
